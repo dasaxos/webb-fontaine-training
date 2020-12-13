@@ -6,14 +6,15 @@ public class ex5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter first number:");
-        double mek = scanner.nextDouble();
-        System.out.println("Please enter operator:");
-        char oprt = scanner.next().charAt(0);
-        System.out.println("Please enter second number:");
-        double erku = scanner.nextDouble();
 
 
-       //chgitem vonc toxem menak tiv gri
+
+        if (scanner.hasNextDouble()) {
+            double mek = scanner.nextDouble();
+            System.out.println("Please enter operator:");
+            char oprt = scanner.next().charAt(0);
+            System.out.println("Please enter second number:");
+            double erku = scanner.nextDouble();
 
             if (erku == 0) {
                 System.out.println("You can't divide number to 0");
@@ -36,6 +37,10 @@ public class ex5 {
                         break;
                 }
             }
+        }else {
+            System.out.println("invalid input");
+        }
+
         }
 
 }
